@@ -24,7 +24,7 @@ FROM      --platform=$TARGETOS/$TARGETARCH debian:bullseye-slim
 
 LABEL     author="Torsten Widmann" maintainer="info@goover.de"
 
-LABEL     org.opencontainers.image.source="https://github.com/pterodactyl/yolks"
+LABEL     org.opencontainers.image.source="https://git-yjs.jiongzu.cn/https://github.com/pterodactyl/yolks"
 LABEL     org.opencontainers.image.licenses=MIT
 
 ENV       DEBIAN_FRONTEND=noninteractive
@@ -37,7 +37,7 @@ RUN       apt update \
 RUN   apt install -y ffmpeg curl python3 iproute2 libjemalloc2 tini
 
 # Install latest youtube-dl
-RUN   curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/youtube-dl
+RUN   curl -L https://git-yjs.jiongzu.cn/https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/youtube-dl
 RUN   chmod a+rx /usr/local/bin/youtube-dl
 
 RUN   update-alternatives --install  /usr/bin/python python /usr/bin/python3 1000
